@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projets - Cassandre Mathiot</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/projets.css">
+</head>
+
+<body>
+  <header>
+    <div class="nom"><a href="index.html">Cassandre Mathiot</a></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">À propos</a></li>
+        <li><a href="projets.html" class="active">Projets</a></li>
+        <li><a href="competences.html">Compétences</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="projects-section">
+
+      <!-- Card Présentation générale -->
+      <article class="project-card intro-card">
+        <div class="card-top intro-top">
+          <h2 class="section-title">Projets</h2>
+        </div>
+
+        <div class="card-body">
+          <p class="intro-text">
+            Voici une sélection de projets que j'ai réalisés. Ces deux applications ont été développées dans le cadre de mon alternance à
+            Arrive (anciennement Flowbird). D'autres projets sont disponibles sur mon profil GitHub.
+          </p>
+          <div class="card-buttons">
+
+            <a href="https://github.com/CrimsonRedLavender" class="btn btn-github">
+              <i class="fab fa-github"></i>Explorer mon GitHub
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 : Backhub-->
+      <article class="project-card">
+        <div class="card-top">
+          <h3 class="project-title">Backhub : Application d’archivage de données IT Service Management
+          </h3>
+          <div class="project-dates" aria-hidden="true">Sept 2025 — En cours</div>
+        </div>
+
+        <div class="project-body">
+          <div class="project-text">
+            <p>
+              Ce projet <strong>web</strong> s’inscrit dans un contexte de rationalisation de différentes plateformes <strong>ITSM</strong>.
+              Backhub est une application permettant d’<strong>archiver</strong> les données des <strong>tickets</strong>
+              d’incidents issus de ces plateformes dans une base de données <strong>MongoDB</strong>.</p>
+            </p>
+            <p>
+              Un utilisateur peut ensuite <strong>consulter</strong> les données archivées grâce à une interface web.
+              Celle-ci comprend une <strong>liste</strong> des tickets archivés, un <strong>historique</strong>
+              des tickets consultés (implémenté avec <strong>Redis</strong>) ainsi que des fonctionnalités de recherche.
+            </p>
+            <p>
+              Lors du début du projet, j'ai fait le choix de générer l'interface web avec le moteur de template <strong>EJS</strong> pour terminer
+              rapidement une première version de l'application, ne connaissant pas les solutions plus modernes mais
+              complexes comme React ou Angular.
+              Le prochain stade du développement est donc de remplacer EJS par <strong>React</strong>.
+            </p>
+          </div>
+
+          <div class="project-media">
+            <img src="./assets/images/backhub.png" alt="image de Backhub">
+          </div>
+        </div>
+
+        <div class="card-bottom">
+          <ul class="tech-badges">
+            <li class="badge badge-js"><i class="fab fa-js"></i> JavaScript</li>
+            <li class="badge badge-nodejs"><i class="fab fa-node-js"></i> NodeJS</li>
+            <li class="badge badge-express"><i class="fas fa-server"></i> Express</li>
+            <li class="badge badge-mongodb"><i class="fas fa-database"></i> MongoDB</li>
+            <li class="badge badge-redis"><i class="fas fa-bolt"></i> Redis</li>
+            <li class="badge badge-ejs"><i class="fas fa-code"></i> EJS</li>
+            <li class="badge badge-bootstrap"><i class="fab fa-bootstrap"></i> Bootstrap</li>
+          </ul>
+
+        </div>
+      </article>
+
+      <!-- Card Amare-->
+      <article class="project-card">
+        <div class="card-top">
+          <h3 class="project-title">Amare : Application d'audit multi-référentiels des actifs d'entreprise
+          </h3>
+          <div class="project-dates" aria-hidden="true">Jan 2025 — Avril 2025</div>
+        </div>
+
+        <div class="project-body">
+          <div class="project-text">
+            <p>
+              Cette application <strong>web</strong> permet de comparer la <strong>cohérence</strong> des données des <strong>actifs</strong>
+              d'entreprise répertoriés entre les plateformes
+              <a href="https://www.servicenow.com/fr/">ServiceNow</a> et <a href="https://www.tanium.fr/">Tanium</a>.
+            </p>
+            <p>L’application consomme les <strong>API</strong> des plateformes, <strong>consolide</strong> les données,
+              les <strong>analyse</strong> et les
+              sauvegarde ensuite en base de données. Les résultats sont présentés à l’utilisateur via l’interface web sous forme
+              d'un <strong>rapport</strong>. Ce rapport est une liste des actifs avec un badge d'<strong>approbation</strong> lorsque les données
+              de l'actif sont <strong>cohérentes</strong>. La cohérence est calculée grâce à un algorithme utilisant la
+              <a href="https://www.baeldung.com/java-levenshtein-distance">distance de Levenshtein</a>.
+
+            </p>
+          </div>
+
+          <div class="project-media">
+            <img src="./assets/images/amare.png" alt="image d'Amare">
+          </div>
+        </div>
+
+        <div class="card-bottom">
+          <ul class="tech-badges">
+            <li class="badge badge-java"><i class="fab fa-java"></i> Java</li>
+            <li class="badge badge-spring"><i class="fas fa-leaf"></i> Spring</li>
+            <li class="badge badge-postgresql"><i class="fas fa-database"></i> PostgreSQL</li>
+            <li class="badge badge-thymeleaf"><i class="fas fa-seedling"></i> Thymeleaf</li>
+            <li class="badge badge-bootstrap"><i class="fab fa-bootstrap"></i> Bootstrap</li>
+            <li class="badge badge-js"><i class="fab fa-js"></i> JavaScript</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    2025 - Cassandre Mathiot
+    <div class="footer-links">
+      <a href="plan.html">Plan du site</a> |
+      <a href="confidentialite.html">Politique de confidentialité</a>
+    </div>
+  </footer>
+  <div id="particles-js"></div>
+  <script src="/js/particles.min.js"></script>
+  <script src="/js/particles-config.js"></script>
+
+  <!-- Lightbox container -->
+  <div id="lightbox">
+    <img id="lightbox-img" src="" alt="Image agrandie">
+  </div>
+
+  <script>
+    // Script lightbox
+    const images = document.querySelectorAll('.project-media img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+      });
+    });
+
+    // Fermer la lightbox en cliquant sur le fond
+    lightbox.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+      lightboxImg.src = '';
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,320 @@
+/* projets.css - sans margin, margin/padding à la place */
+
+/* Section */
+.projects-section {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    /* plus d'espace entre les cards : géré par margin-bottom sur .project-card */
+}
+
+.project-card {
+    background: #fffBff;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 80px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    text-align: left;
+    /* <-- force le texte à gauche dans la card */
+}
+
+.project-card .project-text,
+.project-card .project-text p {
+    text-align: left !important;
+}
+
+.intro-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-card .section-title {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 auto 40px !important;
+    text-align: center !important;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #000;
+    box-sizing: border-box;
+}
+
+.intro-text {
+    margin: 12px 0 0 0;
+    color: #000;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.card-top {
+    display: flex;
+    flex-direction: row;
+    /* <-- assure l'alignement horizontal */
+    align-items: center;
+    /* aligne verticalement */
+    justify-content: flex-start;
+    margin-bottom: 14px;
+}
+
+.card-top.intro-top {
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+
+.project-title {
+    margin: 10px 0 0px 10px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #990000;
+    flex: 0 1 auto;
+    /* ne prend que l'espace nécessaire */
+}
+
+.project-dates {
+    margin-left: auto;
+    /* <-- pousse la date complètement à droite */
+    font-size: 0.95rem;
+    color: #333;
+    white-space: nowrap;
+    font-style: italic;
+}
+
+
+.project-body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.project-text {
+    flex: 1 1 420px;
+    max-width: 680px;
+    color: #000;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin-right: 28px;
+    text-align: left;
+    /* <-- assure que le paragraphe reste aligné à gauche */
+}
+
+/* Si tu veux réduire l'espace sur tablettes, on l'ajustera en media queries */
+
+/* Media (image) */
+.project-media {
+    flex: 0 0 260px;
+    /* largeur fixe raisonnable */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+}
+
+/* Images des projets : effet au survol */
+.project-media img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    display: block;
+    cursor: pointer;
+    /* indique que c'est cliquable */
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-media img:hover {
+    border: 1px solid #990000;
+    /* bordure rouge foncé au survol */
+    box-shadow: 0 0 12px rgba(153, 0, 0, 0.5);
+    /* halo léger */
+}
+/* Card bottom (badges) - utilise div, pas footer tag */
+.card-bottom {
+    margin-top: 18px;
+}
+
+/* Badges : centrés via margin auto et alignement */
+.tech-badges {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* centre les badges horizontalement */
+    align-items: center;
+}
+
+/* Remplacement du margin par margin-right sur chaque badge sauf le dernier */
+.badge {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 999px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.2px;
+    margin-top: 30px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    /* <-- espace vertical entre lignes de badges */
+}
+
+/* Supprime la marge droite du dernier badge dans chaque ligne */
+.tech-badges .badge:last-child {
+    margin-right: 0;
+}
+
+
+
+/* Responsive */
+@media (max-width: 900px) {
+    .project-text {
+        margin-right: 20px;
+    }
+
+    /* réduit l'espace */
+    .project-media {
+        flex: 0 0 220px;
+    }
+
+    .project-card {
+        padding: 20px;
+        margin-bottom: 28px;
+    }
+}
+
+@media (max-width: 680px) {
+    .card-top {
+        flex-direction: row;
+        align-items: flex-start;
+        margin: 8px;
+        /* petit espacement vertical entre titre et date */
+    }
+
+    .project-dates {
+        margin-left: 0;
+    }
+
+    .project-body {
+        flex-direction: column;
+    }
+
+    .project-text {
+        max-width: 100%;
+        margin-right: 0;
+        /* plus d'espace horizontal nécessaire */
+        margin-bottom: 12px;
+        /* espace entre texte et image empilés */
+    }
+
+    .project-media {
+        width: 100%;
+        flex: 0 0 auto;
+    }
+
+    .project-media img {
+        max-width: 100%;
+    }
+
+    .project-card {
+        padding: 18px;
+        margin-bottom: 24px;
+    }
+
+    /* Badges : garder centrés, réduire marge entre eux */
+    .badge {
+        margin-right: 8px;
+        margin-bottom: 8px;
+    }
+
+    .tech-badges .badge:last-child {
+        margin-right: 0;
+    }
+}
+
+/*              Lightbox styles              */
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    /* caché par défaut */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    cursor: zoom-out;
+    /* indique qu'on peut fermer */
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+
+/*        Couleur des badges                       */
+
+.badge-nodejs {
+    background: #68a063;
+}
+
+.badge-express {
+    background: #000000;
+}
+
+.badge-mongodb {
+    background: #4db33d;
+}
+
+.badge-redis {
+    background: #d82c20;
+}
+
+.badge-bootstrap {
+    background: #563d7c;
+}
+
+.badge-js {
+    background: #f7df1e;
+    color: #000;
+}
+
+.badge-ejs {
+    background: #a91e50;
+}
+
+.badge-java {
+    background: #007396;
+}
+
+.badge-spring {
+    background: #6db33f;
+}
+
+.badge-postgresql {
+    background: #336791;
+}
+
+.badge-thymeleaf {
+    background: #005f0f;
+}
+
+a {
+    color: #000;
+}

@@ -1,0 +1,100 @@
+.section-title {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 auto 40px !important;
+    text-align: center !important;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #000;
+    box-sizing: border-box;
+}
+
+.intro-text {
+    margin: 12px 0 0 0;
+    color: #000;
+    line-height: 1.6;
+    font-size: 1rem;
+    text-align: center !important;
+}
+
+.skills-section .skill-card .skill-title {
+    margin-left: 30px;
+}
+.skills-section {
+    max-width: 1100px;
+    margin: 20px auto 60px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Cards */
+.skill-card {
+    background: #fffBff;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 60px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    /* même ombre que projets */
+    box-sizing: border-box;
+    text-align: left;
+}
+
+/* Titres */
+.skill-title {
+    font-size: 1.3rem;
+    /* pas trop gros */
+    font-weight: 600;
+    color: #990000;
+    margin-bottom: 30px;
+}
+
+/* Texte */
+.skill-card p {
+    margin: 20px 0;
+    line-height: 1.6;
+    color: #000;
+    font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .skill-card {
+        padding: 18px;
+        margin-bottom: 40px;
+    }
+
+    .skill-title {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+.subtitle {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.subtitle.lang {
+    color: #007074;
+}
+
+.subtitle.web {
+    color: #c23812;
+}
+
+.subtitle.sql {
+    color: #336791;
+}
+
+.subtitle.nosql {
+    color: #3e9431;
+}
+
+.subtitle.orm {
+    color: #a91e50;
+}
+
+.subtitle.tools {
+    color: #6217d3;
+}
